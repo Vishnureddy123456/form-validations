@@ -19,7 +19,7 @@ class StudentForm(forms.Form):
         re=self.cleaned_data['remail']
         if e!=re:
             raise forms.ValidationError('not matched')
-    def cleaned_botcatcher(self):
+    def clean_botcatcher(self):
         bot=self.cleaned_data.get('botcatcher')
         if len(bot)>0:
             raise forms.ValidationError('data entered by human')
