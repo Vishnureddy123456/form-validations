@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: aqua;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Student Form</h1>
+    <form action="" method="POST">
+        <fieldset style="width: fit-content;">
+        {% csrf_token %}
+        {{SFO.as_p}}
+        <input type="submit" value="validate">
+    </fieldset>
+    </form>
+    </center>
+</body>
+</html>
